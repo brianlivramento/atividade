@@ -1,0 +1,5 @@
+atividade_core:
+    resource: "@AtividadeCoreBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
