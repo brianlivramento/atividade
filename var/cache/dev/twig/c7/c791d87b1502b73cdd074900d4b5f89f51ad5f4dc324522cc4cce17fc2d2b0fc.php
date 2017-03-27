@@ -1,6 +1,6 @@
 <?php
 
-/* @WebProfiler/Profiler/open.css.twig */
+/* WebProfilerBundle:Profiler:open.css.twig */
 class __TwigTemplate_dfa683083a9c35afc7c956cac80c7a33d2a749acd9379164519ba80947d11610 extends Twig_Template
 {
     public function __construct(Twig_Environment $env)
@@ -15,11 +15,11 @@ class __TwigTemplate_dfa683083a9c35afc7c956cac80c7a33d2a749acd9379164519ba80947d
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4a083ec09659c325dcdd5ef18ee2e259dbbbc7bca02f9cb9daa9d58f250fc3dc = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
-        $__internal_4a083ec09659c325dcdd5ef18ee2e259dbbbc7bca02f9cb9daa9d58f250fc3dc->enter($__internal_4a083ec09659c325dcdd5ef18ee2e259dbbbc7bca02f9cb9daa9d58f250fc3dc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/open.css.twig"));
+        $__internal_555af011759af30227ffcd8854760d962065ca9bb17759eebdc43f66013358af = $this->env->getExtension("Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension");
+        $__internal_555af011759af30227ffcd8854760d962065ca9bb17759eebdc43f66013358af->enter($__internal_555af011759af30227ffcd8854760d962065ca9bb17759eebdc43f66013358af_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:open.css.twig"));
 
-        $__internal_9f9cc23608799e3f6e334187c2d59ca61223274ef579eef80c95352c0cb5252f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_9f9cc23608799e3f6e334187c2d59ca61223274ef579eef80c95352c0cb5252f->enter($__internal_9f9cc23608799e3f6e334187c2d59ca61223274ef579eef80c95352c0cb5252f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "@WebProfiler/Profiler/open.css.twig"));
+        $__internal_f26e3c624e01bc4473f92a6d1647128c2f5f0120f5a3bb8993530a77871f6b1f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_f26e3c624e01bc4473f92a6d1647128c2f5f0120f5a3bb8993530a77871f6b1f->enter($__internal_f26e3c624e01bc4473f92a6d1647128c2f5f0120f5a3bb8993530a77871f6b1f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "WebProfilerBundle:Profiler:open.css.twig"));
 
         // line 3
         $context["mixins"] = array("break_long_words" => "-ms-word-break: break-all; word-break: break-all; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; hyphens: auto;", "monospace_font" => "font-family: monospace; font-size: 13px; font-size-adjust: 0.5;", "sans_serif_font" => "font-family: Helvetica, Arial, sans-serif;", "subtle_border_and_shadow" => "background: #FFF; border: 1px solid #E0E0E0; box-shadow: 0px 0px 1px rgba(128, 128, 128, .2);");
@@ -89,16 +89,16 @@ a.doc:hover {
 }
 ";
         
-        $__internal_4a083ec09659c325dcdd5ef18ee2e259dbbbc7bca02f9cb9daa9d58f250fc3dc->leave($__internal_4a083ec09659c325dcdd5ef18ee2e259dbbbc7bca02f9cb9daa9d58f250fc3dc_prof);
+        $__internal_555af011759af30227ffcd8854760d962065ca9bb17759eebdc43f66013358af->leave($__internal_555af011759af30227ffcd8854760d962065ca9bb17759eebdc43f66013358af_prof);
 
         
-        $__internal_9f9cc23608799e3f6e334187c2d59ca61223274ef579eef80c95352c0cb5252f->leave($__internal_9f9cc23608799e3f6e334187c2d59ca61223274ef579eef80c95352c0cb5252f_prof);
+        $__internal_f26e3c624e01bc4473f92a6d1647128c2f5f0120f5a3bb8993530a77871f6b1f->leave($__internal_f26e3c624e01bc4473f92a6d1647128c2f5f0120f5a3bb8993530a77871f6b1f_prof);
 
     }
 
     public function getTemplateName()
     {
-        return "@WebProfiler/Profiler/open.css.twig";
+        return "WebProfilerBundle:Profiler:open.css.twig";
     }
 
     public function isTraitable()
@@ -190,6 +190,6 @@ a.doc:hover {
     top: -7em;
     visibility: hidden;
 }
-", "@WebProfiler/Profiler/open.css.twig", "/var/www/atividades/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/open.css.twig");
+", "WebProfilerBundle:Profiler:open.css.twig", "/var/www/atividade/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views/Profiler/open.css.twig");
     }
 }

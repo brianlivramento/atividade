@@ -105,45 +105,57 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
-        if (0 === strpos($pathinfo, '/atividade')) {
-            // index
-            if (rtrim($pathinfo, '/') === '/atividade') {
-                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'HEAD'));
-                    goto not_index;
-                }
-
-                if (substr($pathinfo, -1) !== '/') {
-                    return $this->redirect($pathinfo.'/', 'index');
-                }
-
-                return array (  '_controller' => 'Atividade\\CoreBundle\\Controller\\AtividadeController::indexAction',  '_route' => 'index',);
+        // index
+        if (rtrim($pathinfo, '/') === '') {
+            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'HEAD'));
+                goto not_index;
             }
-            not_index:
 
-            // add
-            if ($pathinfo === '/atividade/new') {
-                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
-                    goto not_add;
-                }
-
-                return array (  '_controller' => 'Atividade\\CoreBundle\\Controller\\AtividadeController::newAction',  '_route' => 'add',);
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'index');
             }
-            not_add:
 
-            // del
-            if ($pathinfo === '/atividade/del') {
-                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
-                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
-                    goto not_del;
-                }
-
-                return array (  '_controller' => 'Atividade\\CoreBundle\\Controller\\AtividadeController::deleteAction',  '_route' => 'del',);
-            }
-            not_del:
-
+            return array (  '_controller' => 'Atividade\\CoreBundle\\Controller\\AtividadeController::indexAction',  '_route' => 'index',);
         }
+        not_index:
+
+        // add
+        if ($pathinfo === '/new') {
+            if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                goto not_add;
+            }
+
+            return array (  '_controller' => 'Atividade\\CoreBundle\\Controller\\AtividadeController::newAction',  '_route' => 'add',);
+        }
+        not_add:
+
+        // del
+        if ($pathinfo === '/del') {
+            if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                goto not_del;
+            }
+
+            return array (  '_controller' => 'Atividade\\CoreBundle\\Controller\\AtividadeController::deleteAction',  '_route' => 'del',);
+        }
+        not_del:
+
+        // atividade
+        if (rtrim($pathinfo, '/') === '/atividade') {
+            if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                goto not_atividade;
+            }
+
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'atividade');
+            }
+
+            return array (  '_controller' => 'Atividade\\CoreBundle\\Controller\\AtividadeController::atividadeAction',  '_route' => 'atividade',);
+        }
+        not_atividade:
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
